@@ -1,5 +1,5 @@
 /* Cache applicatif simple pour une utilisation hors ligne quand le site est servi en HTTP. */
-var CACHE_NAME = "sncf-traction-academy-v10";
+var CACHE_NAME = "sncf-traction-academy-v12";
 var OFFLINE_FILES = [
   "index.html",
   "manifest.webmanifest",
@@ -45,16 +45,19 @@ self.addEventListener("fetch", function (event) {
     return;
   }
   event.respondWith(
-    caches.match(event.request).then(function (cached) {
-      return cached || fetch(event.request).then(function (response) {
-        var copy = response.clone();
-        caches.open(CACHE_NAME).then(function (cache) {
-          cache.put(event.request, copy);
-        });
-        return response;
+    fetch(event.request).then(function (response) {
+      var copy = response.clone();
+      caches.open(CACHE_NAME).then(function (cache) {
+        cache.put(event.request, copy);
       });
+      return response;
     }).catch(function () {
-      return caches.match("index.html");
+      return caches.match(event.request).then(function (cached) {
+        if (cached) {
+          return cached;
+        }
+        return caches.match("index.html");
+      });
     })
   );
 });

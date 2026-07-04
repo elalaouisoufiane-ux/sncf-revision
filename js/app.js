@@ -735,7 +735,13 @@
   }
 
   function courseReaderHtml(course) {
-    var progress = state.courses[course.id];
+    var progress = state.courses[course.id] || {
+      readPercent: 0,
+      completed: false,
+      lastReadAt: null,
+      timeSpentSeconds: 0
+    };
+    state.courses[course.id] = progress;
     var courses = allCourses();
     var index = courses.findIndex(function (item) { return item.id === course.id; });
     var previous = courses[index - 1];
