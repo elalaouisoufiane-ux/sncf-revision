@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>SNCF Traction Academy</title>
+  <rect width="128" height="128" rx="24" fill="#c91f2e"/>
+  <path d="M26 43h76v13H70v45H57V56H26V43Z" fill="#fff"/>
+  <path d="M79 69h23v12H79V69Z" fill="#fff"/>
+  <path d="M86 88h16v13H86V88Z" fill="#fff"/>
+</svg>

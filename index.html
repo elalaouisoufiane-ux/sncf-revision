@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>SNCF Traction Academy</title>
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <svg aria-hidden="true" class="svg-sprite">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5H15v-6H9v6H4.5A1.5 1.5 0 0 1 3 19.5v-9Z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5A2.5 2.5 0 0 1 7.5 2H21v17H7.5A2.5 2.5 0 0 0 5 21.5v-17Z"/><path d="M5 4.5A2.5 2.5 0 0 0 2.5 7v12A2.5 2.5 0 0 0 5 21.5"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1.5"/><circle cx="3.5" cy="12" r="1.5"/><circle cx="3.5" cy="18" r="1.5"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M8 2.5v4M16 2.5v4M3 9h18"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4"/><path d="M4 20h17"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="9" width="3" height="8"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><path d="M4.9 8.6 3.8 6.7l2.1-2.1 1.9 1.1a7.8 7.8 0 0 1 2-.8L10.3 2h3.4l.5 2.9a7.8 7.8 0 0 1 2 .8l1.9-1.1 2.1 2.1-1.1 1.9c.4.6.7 1.3.8 2l2.9.5v3.4l-2.9.5a7.8 7.8 0 0 1-.8 2l1.1 1.9-2.1 2.1-1.9-1.1a7.8 7.8 0 0 1-2 .8l-.5 2.9h-3.4l-.5-2.9a7.8 7.8 0 0 1-2-.8l-1.9 1.1-2.1-2.1L4.9 15a7.8 7.8 0 0 1-.8-2l-2.9-.5V9.1l2.9-.5c.2-.7.5-1.4.8-2Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 15.4A8.5 8.5 0 0 1 8.6 3.5 8.8 8.8 0 1 0 20.5 15.4Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="m7 8 5-5 5 5"/><path d="M5 21h14"/></symbol>
+  </svg>
+
+  <div class="app-shell" id="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#accueil" aria-label="Accueil SNCF Traction Academy">
+        <span class="brand-mark">TA</span>
+        <span>
+          <strong>SNCF Traction</strong>
+          <small>Academy</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Menu principal">
+        <a href="#accueil" data-route="accueil"><svg><use href="#i-home"></use></svg><span>Accueil</span></a>
+        <a href="#definitions" data-route="definitions"><svg><use href="#i-list"></use></svg><span>Définitions</span></a>
+        <a href="#abreviations" data-route="abreviations"><svg><use href="#i-card"></use></svg><span>Abréviations</span></a>
+        <a href="#cours" data-route="cours"><svg><use href="#i-book"></use></svg><span>Cours</span></a>
+        <a href="#resumes" data-route="resumes"><svg><use href="#i-card"></use></svg><span>Résumés</span></a>
+        <a href="#revisions" data-route="revisions"><svg><use href="#i-play"></use></svg><span>Révisions</span></a>
+        <a href="#journal" data-route="journal"><svg><use href="#i-book"></use></svg><span>Journal de formation</span></a>
+        <a href="#parametres" data-route="parametres"><svg><use href="#i-gear"></use></svg><span>Paramètres</span></a>
+      </nav>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button" id="menu-toggle" type="button" aria-label="Ouvrir ou fermer le menu">
+          <svg><use href="#i-menu"></use></svg>
+        </button>
+        <div>
+          <p class="eyebrow" id="page-kicker">Plateforme personnelle</p>
+          <h1 id="page-title">Accueil</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" data-action="quick-add-journal" type="button">Séance du jour</button>
+          <button class="icon-button" data-action="toggle-theme" type="button" aria-label="Changer le thème">
+            <svg><use href="#i-moon"></use></svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="app" class="app-content" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/definitions.js"></script>
+  <script src="data/abbreviations.js"></script>
+  <script src="data/vocabulary.js"></script>
+  <script src="data/courses.js"></script>
+  <script src="data/summaries.js"></script>
+  <script src="data/journal.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
